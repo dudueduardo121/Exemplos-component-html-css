@@ -1,0 +1,104 @@
+/* @import url('href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+ */
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    background-attachment: fixed;
+} */
+
+.container{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.container:hover .card {
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.container .card:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.container .card .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.container .card .circle h2{
+    color: #fff;
+    font-size: 4.5em;
+    padding: 30px 0;
+}
+
+.container .card .content {
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .content p {
+    color: #666;
+}
+
+.container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .content a{
+    background: #ff3511;
+}
+
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .content a{
+    background: #115cff;
+}
+
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .content a{
+    background: #7811ff;
+}
+

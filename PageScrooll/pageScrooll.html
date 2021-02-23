@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Page_Scrooll</title>
+</head>
+<body>
+
+    <section>
+        <div>
+            <h2 class="reveal">Lorem ipsum dolor sit amet</h2>
+            <h2 class="reveal">Lorem ipsum, or lipsum as it is sometimes known</h2>
+            <img src="img.png">
+        </div>
+    </section>
+    <section>
+        <div>
+            <h2 class="reveal">Lorem ipsum dolor sit amet</h2>
+            <h2 class="reveal">Lorem ipsum, or lipsum as it is sometimes known</h2>
+            <img src="img.png">
+        </div>
+    </section>
+    <section>
+        <div>
+            <h2 class="reveal">Lorem ipsum dolor sit amet</h2>
+            <h2 class="reveal">Lorem ipsum, or lipsum as it is sometimes known</h2>
+            <img src="img.png">
+        </div>
+    </section>
+    <section>
+        <div>
+            <h2 class="reveal">Lorem ipsum dolor sit amet</h2>
+            <h2 class="reveal">Lorem ipsum, or lipsum as it is sometimes known</h2>
+            <img src="img.png">
+        </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script>
+        const reveal = gsap.utils.toArray('.reveal');
+        reveal.forEach((text, i)=>{
+            ScrollTrigger.create({
+                trigger: text,
+                toggleClass: 'active',
+                start: "top 90%",
+                end: "top 20%",
+                //markers: true
+            })
+        });
+
+        const img = gsap.utils.toArray('img');
+        img.forEach((img, i)=>{
+            ScrollTrigger.create({
+                trigger: img,
+                toggleClass: 'active',
+                start: "top 90%",
+                end: "top 20%",
+                //markers: true
+            })
+        });
+    </script>
+
+</body>
+</html>
